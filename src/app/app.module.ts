@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './views/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputBuscaComponent } from './views/input-busca/input-busca.component';
+import { CalculoMultiplosComponent } from './views/calculo-multiplos/calculo-multiplos.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    InputBuscaComponent
+    InputBuscaComponent,
+    CalculoMultiplosComponent
   ],
   imports: [
     BrowserModule,

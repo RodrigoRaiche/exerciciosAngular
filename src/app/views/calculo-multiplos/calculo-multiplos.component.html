@@ -1,0 +1,9 @@
+<h1>[M1S08] Ex 3 - Interação e cálculo com múltiplos inputs</h1>
+<form [formGroup]="_form" (ngSubmit)="submit()">
+    <input [class.active]="invalidoNro1" type="number" name="nro1" id="nro1" placeholder="Digite valor 1" formControlName="valor1">
+    <input [class.active]="invalidoOper" type="text" id="oper" maxlength="1" formControlName="oper" >
+    <input [class.active]="invalidoNro2" type="number" name="nro2" id="nro2" placeholder="Digite valor 2" formControlName="valor2">
+    <button type="submit">Calcular</button>
+</form>
+<button id="btnLimpar" (click)="acaoLimpar()">Limpar</button>
+<span>Resultado: {{resultado}}</span>
