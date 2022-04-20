@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    width: auto;
+    height: 10vh;
+}
+
+
+main {
+    width: auto;
+    height: 80vh;
+
+}
+
+
+form {
+    width: 300px;
+    height: 200px;
+    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#divUsuario {
+    margin-top: 30px;
+    padding-bottom: 20px;
+
+}
+
+#divSenha {
+    margin-left: 10px;
+
+}
+
+span {
+    margin-left: 40px;
+    margin-right: 5px;
+
+}
+
+input {
+    width: 150px;
+    padding-left: 5px;
+}
+
+button{
+    width: 60px;
+    height: 25px;
+    border-radius: 30px;
+    margin-top: 15px;
+    margin-left: 120px;
+}
+
+
+
+footer {
+    width: auto;
+    height: 10vh;
+}
