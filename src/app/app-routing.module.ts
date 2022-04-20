@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
 import { InputBuscaComponent} from './views/input-busca/input-busca.component';
 import { CalculoMultiplosComponent } from './views/calculo-multiplos/calculo-multiplos.component';
+import { SistemaAvaliacaoComponent } from './views/sistema-avaliacao/sistema-avaliacao.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,13 @@ const routes: Routes = [
   {
     path: 'calculoMultiplos',
     component: CalculoMultiplosComponent
+  },
+  {
+    path: 'avaliacao',
+    component: SistemaAvaliacaoComponent
   }
+
+  
 
 ];
 

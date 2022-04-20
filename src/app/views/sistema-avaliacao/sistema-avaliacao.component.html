@@ -1,0 +1,10 @@
+<h1>[M1S08] Ex 4 - Utilizando formulários para sistema de avaliação</h1>
+<form [formGroup]="_form" (ngSubmit)="submit()">
+    <input  type="text" name="nome" id="nome" placeholder="Digite seu nome" formControlName="nome">
+    <input  type="email" name="email" id="email" placeholder="Digite seu e-mail" formControlName="email" >
+    <input  type="text" name="nomeFilme" id="nomeFilme" placeholder="Digite nome filme" formControlName="nomeFilme">
+    <input  type="number" name="avaliacao" id="avaliacao" maxlength="02" min="1" max="10" placeholder="Digite sua avaliação(1 a 10)" formControlName="avaliacao">
+    <button type="submit">Enviar</button>
+</form>
+<button id="btnLimpar" (click)="acaoLimpar()">Cancelar</button>
+<span>{{resultado}}</span>
