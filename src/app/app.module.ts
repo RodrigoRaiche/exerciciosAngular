@@ -11,6 +11,7 @@ import { SistemaAvaliacaoComponent } from './views/sistema-avaliacao/sistema-ava
 import { TestaAPIComponent } from './views/testa-api/testa-api.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComunicaAPIService } from './services/comunica-api.service';
+import { LoadingTelaComponent } from './views/loading-tela/loading-tela.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ComunicaAPIService } from './services/comunica-api.service';
     InputBuscaComponent,
     CalculoMultiplosComponent,
     SistemaAvaliacaoComponent,
-    TestaAPIComponent
+    TestaAPIComponent,
+    LoadingTelaComponent
   ],
   imports: [
     BrowserModule,

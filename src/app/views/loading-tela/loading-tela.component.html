@@ -1,0 +1,6 @@
+<h1>[M1S08] Ex 8 - Utilizando CSS/SCSS, mostre um loading em tela enquanto carrega os dados dos filmes</h1>
+<div id="loader" class="loader" [ngClass]="{'loader': mostraLoading }">
+    <span *ngIf="!mostraLoading">
+        {{result}}
+    </span>
+</div>

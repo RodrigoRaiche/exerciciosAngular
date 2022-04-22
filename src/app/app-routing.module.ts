@@ -5,6 +5,7 @@ import { InputBuscaComponent} from './views/input-busca/input-busca.component';
 import { CalculoMultiplosComponent } from './views/calculo-multiplos/calculo-multiplos.component';
 import { SistemaAvaliacaoComponent } from './views/sistema-avaliacao/sistema-avaliacao.component';
 import { TestaAPIComponent } from './views/testa-api/testa-api.component';
+import { LoadingTelaComponent } from './views/loading-tela/loading-tela.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,12 @@ const routes: Routes = [
   {
     path: 'testaAPI',
     component: TestaAPIComponent
+  },
+  {
+    path: 'loading',
+    component: LoadingTelaComponent
   }
+
 
 
   
