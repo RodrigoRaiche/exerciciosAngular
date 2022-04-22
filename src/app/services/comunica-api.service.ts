@@ -22,4 +22,19 @@ export class ComunicaAPIService {
 
     });
   }
+
+  public requisicaoGetPopular(headers: any) {
+    return new Promise((resolve, reject) => {
+      this.http.get(environment.filmesAPI + 'popular' + '?api_key='+ environment.apiKey, { headers: headers }).toPromise().then((data: any) => {
+        resolve(data)
+      }).catch(err => {
+        console.log('-- catch no get --')
+        console.log(err)
+        reject(err)
+      })
+
+    });
+  }
+
+
 }

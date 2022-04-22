@@ -6,6 +6,7 @@ import { CalculoMultiplosComponent } from './views/calculo-multiplos/calculo-mul
 import { SistemaAvaliacaoComponent } from './views/sistema-avaliacao/sistema-avaliacao.component';
 import { TestaAPIComponent } from './views/testa-api/testa-api.component';
 import { LoadingTelaComponent } from './views/loading-tela/loading-tela.component';
+import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais-popular.component';
 
 const routes: Routes = [
   {
@@ -36,10 +37,11 @@ const routes: Routes = [
   {
     path: 'loading',
     component: LoadingTelaComponent
+  },
+  {
+    path: 'filmePopular',
+    component: FilmeMaisPopularComponent
   }
-
-
-
   
 
 ];

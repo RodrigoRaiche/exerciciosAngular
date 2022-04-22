@@ -12,6 +12,7 @@ import { TestaAPIComponent } from './views/testa-api/testa-api.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComunicaAPIService } from './services/comunica-api.service';
 import { LoadingTelaComponent } from './views/loading-tela/loading-tela.component';
+import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais-popular.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LoadingTelaComponent } from './views/loading-tela/loading-tela.componen
     CalculoMultiplosComponent,
     SistemaAvaliacaoComponent,
     TestaAPIComponent,
-    LoadingTelaComponent
+    LoadingTelaComponent,
+    FilmeMaisPopularComponent
   ],
   imports: [
     BrowserModule,

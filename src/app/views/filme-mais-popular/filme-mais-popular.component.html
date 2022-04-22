@@ -1,0 +1,21 @@
+<h1>[M1S08] Ex 9 - Renderize em tela o filme mais popular</h1>
+<div>
+    <div class="divTitle">
+        <span class="title">{{result.original_title}}</span>
+    </div>
+    <div class="divOverview">
+        <span class="legend">Overview:</span>
+        <span class="content">{{result.overview}}</span>
+    </div>
+    <div class="divVote_average">
+        <span class="legend">Vote Average: </span>
+        <span class="content">{{result.vote_average}}</span>
+    </div>
+    <div class="divVote_count">
+        <span class="legend">Vote Count: </span>
+        <span class="content">{{result.vote_count}}</span>
+    </div>
+    <div class="divPoster">
+        <img class='poster' src="{{imgFilme}}" alt="">
+    </div>
+</div>
