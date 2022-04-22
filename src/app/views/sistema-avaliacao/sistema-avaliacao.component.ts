@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
 
 @Component({
   selector: 'app-sistema-avaliacao',
@@ -9,34 +8,34 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SistemaAvaliacaoComponent implements OnInit {
 
-
-  formValid = true;
-  resultado = '';
-
-  _form: FormGroup = this.formBuilder.group({
-    nome: ['', [Validators.required, Validators.minLength(5)]],
-    email: ['', [Validators.required]],
-    nomeFilme: ['', [Validators.required, Validators.minLength(5)]],
+  registerForm: FormGroup = this.formBuilder.group({
+    nome: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+    nomeFilme: ['', [Validators.required, Validators.minLength(3)]],
     avaliacao: ['', [Validators.required, Validators.maxLength(2), Validators.min(1), Validators.max(10)]]
   })
 
+  submitted = false;
+  resultado = '';
 
   constructor(
     private formBuilder: FormBuilder) { }
 
-  submit() {
-    console.log(this._form.value)
-    if (this._form.valid) {
-       this.resultado = `Você avaliou o filme ${this._form.value.nomeFilme}` 
+
+  onSubmit() {
+    this.submitted = true;
+    console.log(this.registerForm.value)
+    if (this.registerForm.valid) {
+      this.resultado = `Você avaliou o filme ${this.registerForm.value.nomeFilme}`
     }
-    else{
-      this.resultado = ''  
+    else {
+      this.resultado = ''
     }
   }
 
 
   acaoLimpar() {
-    this._form.setValue({
+    this.registerForm.setValue({
       nome: '',
       email: '',
       nomeFilme: '',
@@ -44,6 +43,7 @@ export class SistemaAvaliacaoComponent implements OnInit {
 
     })
     this.resultado = '';
+    this.submitted = false;
   }
 
   ngOnInit(): void {

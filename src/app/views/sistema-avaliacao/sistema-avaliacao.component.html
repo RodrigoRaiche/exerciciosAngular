@@ -1,10 +1,45 @@
 <h1>[M1S08] Ex 4 - Utilizando formulários para sistema de avaliação</h1>
-<form [formGroup]="_form" (ngSubmit)="submit()">
-    <input  type="text" name="nome" id="nome" placeholder="Digite seu nome" formControlName="nome">
-    <input  type="email" name="email" id="email" placeholder="Digite seu e-mail" formControlName="email" >
-    <input  type="text" name="nomeFilme" id="nomeFilme" placeholder="Digite nome filme" formControlName="nomeFilme">
-    <input  type="number" name="avaliacao" id="avaliacao" maxlength="02" min="1" max="10" placeholder="Digite sua avaliação(1 a 10)" formControlName="avaliacao">
-    <button type="submit">Enviar</button>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label class="divLabel">Nome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <input type="text" formControlName="nome" class="form-control"
+            [ngClass]="{'is-invalid': submitted && registerForm.controls['nome'].errors }" />
+        <span *ngIf="submitted && registerForm.controls['nome'].errors">
+            Campo obrigatório
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label class="divLabel">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <input type="text" formControlName="email" class="form-control"
+            [ngClass]="{'is-invalid': submitted && registerForm.controls['email'].errors }" />
+        <span *ngIf="submitted && registerForm.controls['email'].errors">
+            Campo obrigatório
+        </span>
+
+    </div>
+    <div class="form-group">
+        <label class="divLabel">Nome Filme:</label>
+        <input type="text" formControlName="nomeFilme" class="form-control"
+            [ngClass]="{'is-invalid': submitted && registerForm.controls['nomeFilme'].errors }" />
+        <span *ngIf="submitted && registerForm.controls['nomeFilme'].errors">
+            Campo obrigatório
+        </span>
+
+    </div>
+    <div class="form-group">
+        <label class="divLabel">Avaliação&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <input type="text" formControlName="avaliacao" class="form-control"
+            [ngClass]="{'is-invalid': submitted && registerForm.controls['avaliacao'].errors }" />
+        <span *ngIf="submitted && registerForm.controls['avaliacao'].errors">
+            Campo obrigatório
+        </span>
+
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Enviar</button>
+        <button id="btnLimpar" type="reset" (click)="acaoLimpar()">Cancelar</button>
+
+    </div>
 </form>
-<button id="btnLimpar" (click)="acaoLimpar()">Cancelar</button>
 <span>{{resultado}}</span>
