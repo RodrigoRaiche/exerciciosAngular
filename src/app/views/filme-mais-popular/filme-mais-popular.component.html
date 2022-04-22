@@ -1,5 +1,5 @@
-<h1>[M1S08] Ex 9 - Renderize em tela o filme mais popular</h1>
-<div>
+<h1>[M1S08] Ex 10 - Adicione botões de anterior/próximo para navegação entre o top 3 filmes populares</h1>
+<section id="filmes">
     <div class="divTitle">
         <span class="title">{{result.original_title}}</span>
     </div>
@@ -18,4 +18,8 @@
     <div class="divPoster">
         <img class='poster' src="{{imgFilme}}" alt="">
     </div>
-</div>
+    <div id="nav">
+        <button (click)="acaoRetrocede()">Anterior</button>
+        <button (click)="acaoAvanca()">Próximo</button>
+    </div>
+</section>
