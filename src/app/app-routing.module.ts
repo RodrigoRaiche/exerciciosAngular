@@ -4,6 +4,7 @@ import { LoginComponent } from './views/login/login.component';
 import { InputBuscaComponent} from './views/input-busca/input-busca.component';
 import { CalculoMultiplosComponent } from './views/calculo-multiplos/calculo-multiplos.component';
 import { SistemaAvaliacaoComponent } from './views/sistema-avaliacao/sistema-avaliacao.component';
+import { TestaAPIComponent } from './views/testa-api/testa-api.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,12 @@ const routes: Routes = [
   {
     path: 'avaliacao',
     component: SistemaAvaliacaoComponent
+  },
+  {
+    path: 'testaAPI',
+    component: TestaAPIComponent
   }
+
 
   
 

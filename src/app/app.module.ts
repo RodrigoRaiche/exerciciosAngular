@@ -8,6 +8,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputBuscaComponent } from './views/input-busca/input-busca.component';
 import { CalculoMultiplosComponent } from './views/calculo-multiplos/calculo-multiplos.component';
 import { SistemaAvaliacaoComponent } from './views/sistema-avaliacao/sistema-avaliacao.component';
+import { TestaAPIComponent } from './views/testa-api/testa-api.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ComunicaAPIService } from './services/comunica-api.service';
 
 
 @NgModule({
@@ -16,15 +19,20 @@ import { SistemaAvaliacaoComponent } from './views/sistema-avaliacao/sistema-ava
     LoginComponent,
     InputBuscaComponent,
     CalculoMultiplosComponent,
-    SistemaAvaliacaoComponent
+    SistemaAvaliacaoComponent,
+    TestaAPIComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ComunicaAPIService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
