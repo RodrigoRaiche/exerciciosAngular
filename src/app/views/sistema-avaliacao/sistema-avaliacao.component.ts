@@ -26,7 +26,7 @@ export class SistemaAvaliacaoComponent implements OnInit {
     this.submitted = true;
     console.log(this.registerForm.value)
     if (this.registerForm.valid) {
-      this.resultado = `Você avaliou o filme ${this.registerForm.value.nomeFilme}`
+      this.resultado = `Olá,${this.registerForm.value.nome}. Você avaliou o filme ${this.registerForm.value.nomeFilme} com nota ${this.registerForm.value.avaliacao}. Obrigado`
     }
     else {
       this.resultado = ''
