@@ -1,4 +1,4 @@
-import { MenuComponent } from './views/menu/menu.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { BuscaComponent } from './components/busca/busca.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
