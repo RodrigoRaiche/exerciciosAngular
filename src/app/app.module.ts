@@ -15,6 +15,7 @@ import { LoadingTelaComponent } from './views/loading-tela/loading-tela.componen
 import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais-popular.component';
 import { BuscaComponent } from './components/busca/busca.component';
 import { HomeGeralComponent } from './views/home-geral/home-geral.component';
+import { MenuComponent } from './views/menu/menu.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { HomeGeralComponent } from './views/home-geral/home-geral.component';
     LoadingTelaComponent,
     FilmeMaisPopularComponent,
     BuscaComponent,
-    HomeGeralComponent
+    HomeGeralComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
