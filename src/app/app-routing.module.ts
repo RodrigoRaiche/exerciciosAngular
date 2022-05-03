@@ -1,3 +1,4 @@
+import { BuscaComponent } from './components/busca/busca.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
@@ -7,6 +8,7 @@ import { SistemaAvaliacaoComponent } from './views/sistema-avaliacao/sistema-ava
 import { TestaAPIComponent } from './views/testa-api/testa-api.component';
 import { LoadingTelaComponent } from './views/loading-tela/loading-tela.component';
 import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais-popular.component';
+import { HomeGeralComponent } from './views/home-geral/home-geral.component';
 
 const routes: Routes = [
   {
@@ -41,8 +43,11 @@ const routes: Routes = [
   {
     path: 'filmePopular',
     component: FilmeMaisPopularComponent
-  }
-  
+  },
+  {
+    path: 'home',
+    component: HomeGeralComponent
+  },
 
 ];
 

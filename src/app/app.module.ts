@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComunicaAPIService } from './services/comunica-api.service';
 import { LoadingTelaComponent } from './views/loading-tela/loading-tela.component';
 import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais-popular.component';
+import { BuscaComponent } from './components/busca/busca.component';
+import { HomeGeralComponent } from './views/home-geral/home-geral.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais
     SistemaAvaliacaoComponent,
     TestaAPIComponent,
     LoadingTelaComponent,
-    FilmeMaisPopularComponent
+    FilmeMaisPopularComponent,
+    BuscaComponent,
+    HomeGeralComponent
   ],
   imports: [
     BrowserModule,
