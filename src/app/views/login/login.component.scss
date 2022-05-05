@@ -52,12 +52,21 @@ input {
     padding-left: 5px;
 }
 
+.buttons{
+    display: flex;
+    margin-left: 90px;
+
+}
+
 button{
     width: 60px;
     height: 25px;
     border-radius: 30px;
     margin-top: 15px;
-    margin-left: 120px;
+}
+
+#esqueciSenha{
+    width: 100px;
 }
 
 

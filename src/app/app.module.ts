@@ -17,6 +17,8 @@ import { BuscaComponent } from './components/busca/busca.component';
 import { HomeGeralComponent } from './views/home-geral/home-geral.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FullComponent } from './layout/full/full.component';
+import { ContentComponent } from './layout/content/content.component';
+import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { FullComponent } from './layout/full/full.component';
     BuscaComponent,
     HomeGeralComponent,
     MenuComponent,
-    FullComponent
+    FullComponent,
+    ContentComponent,
+    EsqueciSenhaComponent
   ],
   imports: [
     BrowserModule,

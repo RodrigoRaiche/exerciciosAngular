@@ -11,17 +11,27 @@ import { TestaAPIComponent } from './views/testa-api/testa-api.component';
 import { LoadingTelaComponent } from './views/loading-tela/loading-tela.component';
 import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais-popular.component';
 import { HomeGeralComponent } from './views/home-geral/home-geral.component';
+import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.component';
+import { ContentComponent } from './layout/content/content.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'full',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home', component: ContentComponent,
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'esquecisenha', component: EsqueciSenhaComponent },
+      ]
+
   },
   {
     path: 'full', component: FullComponent,
     children: [
-      { path: 'login', component: LoginComponent },
+      { path: 'loading', component: LoadingTelaComponent },
       { path: 'calculoMultiplos', component: CalculoMultiplosComponent },
       { path: 'avaliacao', component: SistemaAvaliacaoComponent },
       ]

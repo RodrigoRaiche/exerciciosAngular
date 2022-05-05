@@ -12,8 +12,8 @@ export class LoginComponent implements OnInit {
  formValid = true;
 
  _form: FormGroup = this.formBuilder.group({
-    usuario: ['', [Validators.required, Validators.minLength(5)]],
-    senha: ['', [Validators.required, Validators.minLength(8)]]
+    usuario: ['', [Validators.minLength(5)]],
+    senha: ['', [ Validators.minLength(8)]]
 
   })
 
