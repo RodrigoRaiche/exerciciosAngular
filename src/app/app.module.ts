@@ -16,6 +16,7 @@ import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais
 import { BuscaComponent } from './components/busca/busca.component';
 import { HomeGeralComponent } from './views/home-geral/home-geral.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { FullComponent } from './layout/full/full.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MenuComponent } from './components/menu/menu.component';
     FilmeMaisPopularComponent,
     BuscaComponent,
     HomeGeralComponent,
-    MenuComponent
+    MenuComponent,
+    FullComponent
   ],
   imports: [
     BrowserModule,

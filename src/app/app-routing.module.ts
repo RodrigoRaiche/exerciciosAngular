@@ -1,3 +1,4 @@
+import { FullComponent } from './layout/full/full.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { BuscaComponent } from './components/busca/busca.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,25 @@ import { LoadingTelaComponent } from './views/loading-tela/loading-tela.componen
 import { FilmeMaisPopularComponent } from './views/filme-mais-popular/filme-mais-popular.component';
 import { HomeGeralComponent } from './views/home-geral/home-geral.component';
 
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'full',
+    pathMatch: 'full'
+  },
+  {
+    path: 'full', component: FullComponent,
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'calculoMultiplos', component: CalculoMultiplosComponent },
+      { path: 'avaliacao', component: SistemaAvaliacaoComponent },
+      ]
+  
+  },
+
+];  
+
+/*
 const routes: Routes = [
   {
     path: '',
@@ -55,6 +75,7 @@ const routes: Routes = [
   },
 
 ];
+*/
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
