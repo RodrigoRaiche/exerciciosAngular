@@ -5,16 +5,15 @@
     <form [formGroup]="_form" (ngSubmit)="submit()">
         <h1>Raiche Filmes</h1>
         <div id="divUsuario">
-            <span>Usuário:</span><input type="text" placeholder="Digite usuário" formControlName="usuario">
+            <span>Email:</span><input type="text" placeholder="Digite -email" formControlName="email">
         </div>
         <div id="divSenha">
             <span>Senha:</span><input type="password" placeholder="Digite senha" formControlName="senha">
         </div>
         <div class="buttons">
-            <button routerLink="/full/avaliacao" type="submit">Login</button>
+            <button  type="submit">Login</button>
             <button id="esqueciSenha" routerLink="/home/esquecisenha">Esqueci senha</button>
         </div>
     </form>
-
 </main>
 <footer></footer>

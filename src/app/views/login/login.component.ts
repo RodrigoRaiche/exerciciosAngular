@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LiberaLoginService } from 'src/app/services/libera-login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,31 +11,34 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
 
- formValid = true;
+  formValid = true;
 
- _form: FormGroup = this.formBuilder.group({
-    usuario: ['', [Validators.minLength(5)]],
-    senha: ['', [ Validators.minLength(8)]]
+  _form: FormGroup = this.formBuilder.group({
+    email: ['', [Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+    senha: ['', [Validators.required, Validators.minLength(6)]]
 
   })
 
   constructor(
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private liberaLogin: LiberaLoginService) { }
 
 
-submit() {
-  console.log(this._form.value)
-  if (this._form.valid) {
-    console.log(this._form.valid)
+
+  submit() {
+    if (this._form.valid) {
+      this.liberaLogin.setlogin(true);
+      this.router.navigate(['/full/avaliacao'])
+    }
+    else {
+      alert('Formulário inválido')
+    }
   }
-  else {
-    alert('Formulário inválido')
+
+  ngOnInit(): void {
+
+
   }
-}
-
-ngOnInit(): void {
-
-
-}
 
 }

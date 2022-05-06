@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LiberaLoginService } from 'src/app/services/libera-login.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private liberaLogin: LiberaLoginService) { }
 
   ngOnInit(): void {
   }
+
+  desabilitaLogin(){
+    this.liberaLogin.setlogin(false);
+  }
+
+     
 
 }
