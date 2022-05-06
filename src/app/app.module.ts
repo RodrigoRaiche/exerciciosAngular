@@ -21,6 +21,7 @@ import { ContentComponent } from './layout/content/content.component';
 import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.component';
 import { InformarEmailComponent } from './components/informar-email/informar-email.component';
 import { Page404Component } from './publico/views/page404/page404.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { Page404Component } from './publico/views/page404/page404.component';
     EsqueciSenhaComponent,
     InformarEmailComponent,
     Page404Component,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

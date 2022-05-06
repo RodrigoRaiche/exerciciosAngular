@@ -18,23 +18,29 @@ import { InformarEmailComponent } from './components/informar-email/informar-ema
 import { Login2Component } from './publico/views/login2/login2.component';
 import { EsqueciSenha2Component } from './publico/views/esqueci-senha2/esqueci-senha2.component';
 import { Page404Component } from './publico/views/page404/page404.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
+  {
+    path: 'inicio', component: HomeComponent,
+
+  }, 
+
   {
     path: 'login', component: Login2Component,
 
   }, 
   {
-    path: '**', component: Page404Component,
+    path: 'esquecisenha2', component: EsqueciSenha2Component,
 
   }, 
   {
-    path: 'esquecisenha', component: EsqueciSenha2Component,
+    path: 'informaremail', component: InformarEmailComponent,
 
   }, 
   {
@@ -62,6 +68,11 @@ const routes: Routes = [
     ]
 
   },
+  {
+    path: '**', component: Page404Component,
+
+  }, 
+
 
 ];
 
