@@ -38,7 +38,7 @@ import { InformarEmailComponent } from './components/informar-email/informar-ema
     FullComponent,
     ContentComponent,
     EsqueciSenhaComponent,
-    InformarEmailComponent
+    InformarEmailComponent,
   ],
   imports: [
     BrowserModule,

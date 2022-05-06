@@ -15,13 +15,28 @@ import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.
 import { ContentComponent } from './layout/content/content.component';
 import { AuthGuard } from './services/guard/auth.guard';
 import { InformarEmailComponent } from './components/informar-email/informar-email.component';
+import { Login2Component } from './publico/views/login2/login2.component';
+import { EsqueciSenha2Component } from './publico/views/esqueci-senha2/esqueci-senha2.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
+  {
+    path: 'login', component: Login2Component,
+
+  }, 
+  {
+    path: 'esquecisenha', component: EsqueciSenha2Component,
+
+  }, 
+  {
+    path: 'privado',
+    loadChildren: () => import('./privado/privado.module').then(m =>
+      m.PrivadoModule)
+  }, 
   {
     path: 'home', component: ContentComponent,
     children: [
