@@ -19,6 +19,7 @@ import { Login2Component } from './publico/views/login2/login2.component';
 import { EsqueciSenha2Component } from './publico/views/esqueci-senha2/esqueci-senha2.component';
 import { Page404Component } from './publico/views/page404/page404.component';
 import { HomeComponent } from './components/home/home.component';
+import { Auth2Guard } from './services/guard/auth2.guard';
 
 const routes: Routes = [
   {
@@ -45,6 +46,7 @@ const routes: Routes = [
   }, 
   {
     path: 'privado',
+    canLoad: [Auth2Guard],
     loadChildren: () => import('./privado/privado.module').then(m =>
       m.PrivadoModule)
   }, 
