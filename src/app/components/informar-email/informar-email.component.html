@@ -1,0 +1,12 @@
+<header>
+    <h1>[M1S10] Ex 6 - Defina a rota inicial da aplicação para a tela "Informar e-mail"</h1>
+</header>
+<main>
+    <form [formGroup]="_form" (ngSubmit)="submit()">
+        <div>
+            <span>Email:</span><input type="text" placeholder="Digite -email" formControlName="email">
+        </div>
+        <button  type="submit">Salvar</button>
+    </form>
+
+</main>

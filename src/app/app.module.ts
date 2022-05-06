@@ -19,6 +19,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FullComponent } from './layout/full/full.component';
 import { ContentComponent } from './layout/content/content.component';
 import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.component';
+import { InformarEmailComponent } from './components/informar-email/informar-email.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.
     MenuComponent,
     FullComponent,
     ContentComponent,
-    EsqueciSenhaComponent
+    EsqueciSenhaComponent,
+    InformarEmailComponent
   ],
   imports: [
     BrowserModule,
