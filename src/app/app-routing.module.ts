@@ -17,6 +17,7 @@ import { AuthGuard } from './services/guard/auth.guard';
 import { InformarEmailComponent } from './components/informar-email/informar-email.component';
 import { Login2Component } from './publico/views/login2/login2.component';
 import { EsqueciSenha2Component } from './publico/views/esqueci-senha2/esqueci-senha2.component';
+import { Page404Component } from './publico/views/page404/page404.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   },
   {
     path: 'login', component: Login2Component,
+
+  }, 
+  {
+    path: '**', component: Page404Component,
 
   }, 
   {
